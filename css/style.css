@@ -1,0 +1,44 @@
+*, 
+*::after, 
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+section {
+	padding: 20px;
+}
+
+form {
+	border: 1px solid #ccc;
+	padding: 20px;
+	max-width: 500px;
+	margin: 0 auto;
+	font-family: Arial, sans-serif;
+  }
+  
+  label {
+	display: block;
+	margin-bottom: 10px;
+  }
+  
+  input,
+  select {
+	display: block;
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border: 2px solid #ccc;
+  }
+  
+  input[type="submit"] {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  
