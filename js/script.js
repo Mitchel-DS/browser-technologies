@@ -1,8 +1,3 @@
-const form = document.querySelector('form');
-const nameInput = document.querySelector('input[name="name"]');
-const animalSelect = document.querySelector('select[name="animal"]');
-const sleepInput = document.querySelector('input[name="sleep"]');
-
 function validateForm(event) {
   event.preventDefault();
   
