@@ -6,6 +6,7 @@
 	padding: 0;
 }
 
+/* root variables */
 :root {
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
@@ -37,10 +38,6 @@ form {
 	margin: 0 auto;
 }
 
-label {
-	display: block;
-}
-
 input[type="text"], input[type="email"] {
 	display: block;
 	width: 100%;
@@ -50,12 +47,9 @@ input[type="text"], input[type="email"] {
 	border: 1px solid #ccc;
 }
 
-input:valid {
-	border-color: #ccc;
-}
+label {
+	display: block;
 
-input:invalid {
-	border-color: red;
 }
 
 input[type="submit"] {

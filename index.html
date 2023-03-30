@@ -5,118 +5,161 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Browser Technologies</title>
+	<title>Enquette - Minor Web</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	<!-- Personal information -->
-	<section>
-		<form action="#">
+	<main>
+		<!-- Personal information -->
+		<form id="form" action="#">
+			<section>
 				<h2>Personal information</h2>
 				<label for="student-name">What's your name?</label>
 				<input type="text" name="student-name" id="student-name" required>
 
 				<label for="student-number">What's your student number?</label>
-				<input type="text" pattern="[5-6][0-9]{8}" name="student-number" id="student-number" required>
+				<input type="text" pattern="[5-6][0-9]{8}" maxlength="9" name="student-number" id="student-number"
+					required>
 
 				<label for="student-email">What's your email?</label>
 				<input type="email" name="student-email" id="student-email" required>
+			</section>
+
+			<!-- Web App from Scratch -->
+			<section>
+				<h2>Web App from Scratch</h2>
+				<h3>Welke docent(en)?</h3>
+				<label for="wafs-docent"></label>
+				<input type="text" name="wafs-docent" id="wafs-docent" value="">
+
+				<h3>Tijdens welke periode had je dit vak?</h3>
+				<label for="wafs-weken">
+					<input type="radio" name="wafs-weken" id="blok1" value="blok1"> Blok 1
+				</label>
+				<label for="wafs-weken">
+					<input type="radio" name="wafs-weken" id="blok2" value="blok2"> Blok 2
+				</label>
+				<label for="wafs-weken">
+					<input type="radio" name="wafs-weken" id="blok3" value="blok3"> Blok 3
+				</label>
+				<label for="wafs-weken">
+					<input type="radio" name="wafs-weken" id="blok4" value="blok4"> Blok 4
+				</label>
+
+				<h3>Beoordeel de lesstof op een schaal van 1-10</h3>
+				<label for="wafs-lesstof"></label>
+				<input type="range" name="wafs-lesstof" id="wafs-lesstof" min="1" max="10" value="0">
+				<h3>Beoordeel de uitleg op een schaal van 1-10</h3>
+				<label for="wafs-uitleg"></label>
+				<input type="range" name="wafs-uitleg" id="wafs-uitleg" min="1" max="10" value="0">
+				<h3>Beoordeel de inzicht op een schaal van 1-10</h3>
+				<label for="wafs-inzicht"></label>
+				<input type="range" name="wafs-inzicht" id="wafs-inzicht" min="1" max="10" value="0">
+
+			</section>
+
+			<!-- CSS to the Rescue -->
+			<section>
+				<h2>CSS to the Rescue</h2>
+				<h3>Welke docent(en)?</h3>
+				<label for="cssr-docent"></label>
+				<input type="text" name="cssr-docent" id="cssr-docent" value="">
+
+				<h3>Tijdens welke periode had je dit vak?</h3>
+				<label for="cssr-weken">
+					<input type="radio" name="cssr-weken" id="blok1" value="blok1"> Blok 1
+				</label>
+				<label for="cssr-weken">
+					<input type="radio" name="cssr-weken" id="blok2" value="blok2"> Blok 2
+				</label>
+				<label for="cssr-weken">
+					<input type="radio" name="cssr-weken" id="blok3" value="blok3"> Blok 3
+				</label>
+				<label for="cssr-weken">
+					<input type="radio" name="cssr-weken" id="blok4" value="blok4"> Blok 4
+				</label>
+
+				<h3>Beoordeel de lesstof op een schaal van 1-10</h3>
+				<label for="cssr-lesstof"></label>
+				<input type="range" name="cssr-lesstof" id="cssr-lesstof" min="1" max="10" value="0">
+				<h3>Beoordeel de uitleg op een schaal van 1-10</h3>
+				<label for="cssr-uitleg"></label>
+				<input type="range" name="cssr-uitleg" id="cssr-uitleg" min="1" max="10" value="0">
+				<h3>Beoordeel de inzicht op een schaal van 1-10</h3>
+				<label for="cssr-inzicht"></label>
+				<input type="range" name="cssr-inzicht" id="cssr-inzicht" min="1" max="10" value="0">
+			</section>
+
+			<!-- Progressive Web App -->
+			<section>
+				<h2>Progressive Web App</h2>
+				<h3>Welke docent(en)?</h3>
+				<label for="pwa-docent"></label>
+				<input type="text" name="pwa-docent" id="pwa-docent" value="">
+
+				<h3>Tijdens welke periode had je dit vak?</h3>
+				<label for="pwa-weken">
+					<input type="radio" name="pwa-weken" id="blok1" value="blok1"> Blok 1
+				</label>
+				<label for="pwa-weken">
+					<input type="radio" name="pwa-weken" id="blok2" value="blok2"> Blok 2
+				</label>
+				<label for="pwa-weken">
+					<input type="radio" name="pwa-weken" id="blok3" value="blok3"> Blok 3
+				</label>
+				<label for="pwa-weken">
+					<input type="radio" name="pwa-weken" id="blok4" value="blok4"> Blok 4
+				</label>
+
+				<h3>Beoordeel de lesstof op een schaal van 1-10</h3>
+				<label for="pwa-lesstof"></label>
+				<input type="range" name="pwa-lesstof" id="pwa-lesstof" min="1" max="10" value="0">
+				<h3>Beoordeel de uitleg op een schaal van 1-10</h3>
+				<label for="pwa-uitleg"></label>
+				<input type="range" name="pwa-uitleg" id="pwa-uitleg" min="1" max="10" value="0">
+				<h3>Beoordeel de inzicht op een schaal van 1-10</h3>
+				<label for="pwa-inzicht"></label>
+				<input type="range" name="pwa-inzicht" id="pwa-inzicht" min="1" max="10" value="0">
+
+			</section>
+
+			<!-- Browser Technologies -->
+			<section>
+				<h2>Browser Technologies</h2>
+				<h3>Welke docent(en)?</h3>
+				<label for="bt-docent"></label>
+				<input type="text" name="bt-docent" id="bt-docent" value="">
+
+				<h3>Tijdens welke periode had je dit vak?</h3>
+				<label for="bt-weken">
+					<input type="radio" name="bt-weken" id="blok1" value="blok1"> Blok 1
+				</label>
+				<label for="bt-weken">
+					<input type="radio" name="bt-weken" id="blok2" value="blok2"> Blok 2
+				</label>
+				<label for="bt-weken">
+					<input type="radio" name="bt-weken" id="blok3" value="blok3"> Blok 3
+				</label>
+				<label for="bt-weken">
+					<input type="radio" name="bt-weken" id="blok4" value="blok4"> Blok 4
+				</label>
+
+				<h3>Beoordeel de lesstof op een schaal van 1-10</h3>
+				<label for="bt-lesstof"></label>
+				<input type="range" name="bt-lesstof" id="bt-lesstof" min="1" max="10" value="0">
+				<h3>Beoordeel de uitleg op een schaal van 1-10</h3>
+				<label for="bt-uitleg"></label>
+				<input type="range" name="bt-uitleg" id="bt-uitleg" min="1" max="10" value="0">
+				<h3>Beoordeel de inzicht op een schaal van 1-10</h3>
+				<label for="bt-inzicht"></label>
+				<input type="range" name="bt-inzicht" id="bt-inzicht" min="1" max="10" value="0">
+
+			</section>
+
+			<input type="submit" value="Submit	">
 		</form>
-	</section>
-
-	<!-- Web App from Scratch -->
-	<section>
-		<form action="wafs">
-			<h2>Web App from Scratch</h2>
-			<label for="wafs-docent">Docent(en)</label>
-			<input type="text" name="wafs-docent" id="wafs-docent">
-
-			<label for="wafs-weken">Weken waarin je het vaak deed</label>
-			<input type="radio" name="wafs-weken" id="blok1" value="blok1">
-
-			<label for="wafs-lesstof">Beoordeling op schaal van 1-10</label>
-			<input type="range" name="wafs-lesstof" id="wafs-lesstof">
-
-			<label for="wafs-uitleg">Beoordeling op schaal van 1-10</label>
-			<input type="range" name="wafs-uitleg" id="wafs-uitleg">
-
-			<label for="wafs-inzicht">Beoordeling op schaal van 1-10</label>
-			<input type="range" name="wafs-inzicht" id="wafs-inzicht">
-
-			<input type="submit" value="Next">
-		</form>
-	</section>
-
-	<!-- CSS to the Rescue -->
-	<section>
-		<form action="cssr">
-			<h2>CSS to the Rescue</h2>
-			<label for="cssr-docent">Docent(en)</label>
-			<input type="text" name="cssr-docent" id="cssr-docent">
-
-			<label for="cssr-weken">Weken waarin je het vaak deed</label>
-			<input type="radio" name="cssr-weken" id="blok1" value="blok1">
-
-			<label for="cssr-lesstof">Beoordeling op schaal van 1-10</label>
-			<input type="range" name="cssr-lesstof" id="cssr-lesstof">
-
-			<label for="cssr-uitleg">Beoordeling op schaal van 1-10</label>
-			<input type="range" name="cssr-uitleg" id="cssr-uitleg">
-
-			<label for="cssr-inzicht">Beoordeling op schaal van 1-10</label>
-			<input type="range" name="cssr-inzicht" id="cssr-inzicht">
-
-			<input type="submit" value="Next">
-		</form>
-	</section>
-
-	<!-- Progressive Web App -->
-	<section>
-		<form action="pwa">
-			<h2>Progressive Web App</h2>
-			<label for="pwa-docent">Docent(en)</label>
-			<input type="text" name="pwa-docent" id="pwa-docent">
-
-			<label for="pwa-weken">Weken waarin je het vaak deed</label>
-			<input type="radio" name="pwa-weken" id="blok1" value="blok1">
-
-			<label for="pwa-lesstof">Beoordeling op schaal van 1-10</label>
-			<input type="range" name="pwa-lesstof" id="pwa-lesstof">
-
-			<label for="pwa-uitleg">Beoordeling op schaal van 1-10</label>
-			<input type="range" name="pwa-uitleg" id="pwa-uitleg">
-
-			<label for="pwa-inzicht">Beoordeling op schaal van 1-10</label>
-			<input type="range" name="pwa-inzicht" id="pwa-inzicht">
-
-			<input type="submit" value="Next">
-		</form>
-	</section>
-
-	<!-- Browser Technologies -->
-	<section>
-		<form action="bt">
-			<h2>Browser Technologies</h2>
-			<label for="bt-docent">Docent(en)</label>
-			<input type="text" name="bt-docent" id="bt-docent">
-
-			<label for="bt-weken">Weken waarin je het vaak deed</label>
-			<input type="radio" name="bt-weken" id="blok1" value="blok1">
-
-			<label for="bt-lesstof">Beoordeling op schaal van 1-10</label>
-			<input type="range" name="bt-lesstof" id="bt-lesstof">
-
-			<label for="bt-uitleg">Beoordeling op schaal van 1-10</label>
-			<input type="range" name="bt-uitleg" id="bt-uitleg">
-
-			<label for="bt-inzicht">Beoordeling op schaal van 1-10</label>
-			<input type="range" name="bt-inzicht" id="bt-inzicht">
-
-			<input type="submit" value="Next">
-		</form>
-	</section>
-
+	</main>
 	<script src="js/script.js"></script>
 </body>
 
