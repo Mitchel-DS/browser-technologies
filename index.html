@@ -11,9 +11,20 @@
 
 <body>
 	<main>
+		<!-- Results -->
+		<div id="results">
+			<h2>Results</h2>
+			<p>Here are the results of the survey:</p>
+			<div id="results-container"></div>
+		</div>
+
+		<div id="error">
+
+		</div>
+
 		<!-- Personal information -->
 		<form id="form" action="#">
-			<section>
+			<section class="personal-info">
 				<h2>Personal information</h2>
 				<label for="student-name">What's your name?</label>
 				<input type="text" name="student-name" id="student-name" required>
@@ -24,14 +35,15 @@
 
 				<label for="student-email">What's your email?</label>
 				<input type="email" name="student-email" id="student-email" required>
+				<button id="info-button">Next</button>
 			</section>
 
 			<!-- Web App from Scratch -->
-			<section>
+			<section class="wafs">
 				<h2>Web App from Scratch</h2>
 				<h3>Welke docent(en)?</h3>
 				<label for="wafs-docent"></label>
-				<input type="text" name="wafs-docent" id="wafs-docent" value="">
+				<input type="text" name="wafs-docent" id="wafs-docent" value="" placeholder="Robert..">
 
 				<h3>Tijdens welke periode had je dit vak?</h3>
 				<label for="wafs-weken">
@@ -56,11 +68,12 @@
 				<h3>Beoordeel de inzicht op een schaal van 1-10</h3>
 				<label for="wafs-inzicht"></label>
 				<input type="range" name="wafs-inzicht" id="wafs-inzicht" min="1" max="10" value="0">
+				<button id="info-button" class="js-disabled">Next</button>
 
 			</section>
 
 			<!-- CSS to the Rescue -->
-			<section>
+			<section class="cssr">
 				<h2>CSS to the Rescue</h2>
 				<h3>Welke docent(en)?</h3>
 				<label for="cssr-docent"></label>
@@ -81,7 +94,7 @@
 				</label>
 
 				<h3>Beoordeel de lesstof op een schaal van 1-10</h3>
-				<label for="cssr-lesstof"></label>
+				<label for="cssr-lesstof"></label>	
 				<input type="range" name="cssr-lesstof" id="cssr-lesstof" min="1" max="10" value="0">
 				<h3>Beoordeel de uitleg op een schaal van 1-10</h3>
 				<label for="cssr-uitleg"></label>
@@ -89,10 +102,12 @@
 				<h3>Beoordeel de inzicht op een schaal van 1-10</h3>
 				<label for="cssr-inzicht"></label>
 				<input type="range" name="cssr-inzicht" id="cssr-inzicht" min="1" max="10" value="0">
+				<button id="info-button" class="js-disabled">Next</button>
+
 			</section>
 
 			<!-- Progressive Web App -->
-			<section>
+			<section class="pwa">
 				<h2>Progressive Web App</h2>
 				<h3>Welke docent(en)?</h3>
 				<label for="pwa-docent"></label>
@@ -121,11 +136,12 @@
 				<h3>Beoordeel de inzicht op een schaal van 1-10</h3>
 				<label for="pwa-inzicht"></label>
 				<input type="range" name="pwa-inzicht" id="pwa-inzicht" min="1" max="10" value="0">
+				<button id="info-button" class="js-disabled">Next</button>
 
 			</section>
 
 			<!-- Browser Technologies -->
-			<section>
+			<section class="bt">
 				<h2>Browser Technologies</h2>
 				<h3>Welke docent(en)?</h3>
 				<label for="bt-docent"></label>
@@ -154,10 +170,9 @@
 				<h3>Beoordeel de inzicht op een schaal van 1-10</h3>
 				<label for="bt-inzicht"></label>
 				<input type="range" name="bt-inzicht" id="bt-inzicht" min="1" max="10" value="0">
-
+				<input type="submit" value="Submit">
 			</section>
 
-			<input type="submit" value="Submit	">
 		</form>
 	</main>
 	<script src="js/script.js"></script>
