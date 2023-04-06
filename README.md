@@ -1,11 +1,16 @@
 # browser-technologies
 
+## Description
+
+## Demo
+[Demo](https://browser-technologies-2021.herokuapp.com/)
+
 ## Criteria
 
-- [ ]	Student kan de _Core functionaliteit_ van een use case doorgronden
+- [x]	Student kan de _Core functionaliteit_ van een use case doorgronden
 - [ ]	Student kan uitleggen wat _Progressive Enhancement_ en _Feature Detection_ is en hoe dit toe te passen in Web Development
-- [ ]	De demo is opgebouwd in 3 lagen, volgens het principe van _Progressive Enhancement_
-- [ ]	De user experience van de demo is goed
+- [x]	De demo is opgebouwd in 3 lagen, volgens het principe van _Progressive Enhancement_
+- [x]	De user experience van de demo is goed
 	-	Let op leesbaarheidsregels, contrast en kleuren
 	-	Let op gebruiksvriendelijkheid, zoals affordance en feedback op interactieve elementen
 	-	De meest 'enhanced' versie is super vet, gaaf en h-e-l-e-maal te leuk om te gebruiken

@@ -12,30 +12,29 @@
 <body>
 	<main>
 		<!-- Results -->
-		<div id="results">
+		<div id="results-container">
 			<h2>Results</h2>
 			<p>Here are the results of the survey:</p>
-			<div id="results-container"></div>
+			<div id="results"></div>
 		</div>
 
-		<div id="error">
-
+		<div class="error">
+			<p>! Please fill in all fields</p>
 		</div>
 
 		<!-- Personal information -->
 		<form id="form" action="#">
-			<section class="personal-info">
+			<section class="personal-info active">
 				<h2>Personal information</h2>
 				<label for="student-name">What's your name?</label>
-				<input type="text" name="student-name" id="student-name" required>
+				<input required type="text" name="student-name" id="student-name">
 
 				<label for="student-number">What's your student number?</label>
-				<input type="text" pattern="[5-6][0-9]{8}" maxlength="9" name="student-number" id="student-number"
+				<input required type="text" pattern="[5-6][0-9]{8}" maxlength="9" name="student-number" id="student-number"
 					required>
 
 				<label for="student-email">What's your email?</label>
-				<input type="email" name="student-email" id="student-email" required>
-				<button id="info-button">Next</button>
+				<input required type="email" name="student-email" id="student-email" required>
 			</section>
 
 			<!-- Web App from Scratch -->
@@ -43,32 +42,31 @@
 				<h2>Web App from Scratch</h2>
 				<h3>Welke docent(en)?</h3>
 				<label for="wafs-docent"></label>
-				<input type="text" name="wafs-docent" id="wafs-docent" value="" placeholder="Robert..">
+				<input required type="text" name="wafs-docent" id="wafs-docent" value="Robert, Joost" placeholder="Robert..">
 
 				<h3>Tijdens welke periode had je dit vak?</h3>
 				<label for="wafs-weken">
-					<input type="radio" name="wafs-weken" id="blok1" value="blok1"> Blok 1
+					<input required type="radio" name="wafs-weken" id="blok1" value="blok1" checked> Blok 1
 				</label>
 				<label for="wafs-weken">
-					<input type="radio" name="wafs-weken" id="blok2" value="blok2"> Blok 2
+					<input required type="radio" name="wafs-weken" id="blok2" value="blok2"> Blok 2
 				</label>
 				<label for="wafs-weken">
-					<input type="radio" name="wafs-weken" id="blok3" value="blok3"> Blok 3
+					<input required type="radio" name="wafs-weken" id="blok3" value="blok3"> Blok 3
 				</label>
 				<label for="wafs-weken">
-					<input type="radio" name="wafs-weken" id="blok4" value="blok4"> Blok 4
+					<input required type="radio" name="wafs-weken" id="blok4" value="blok4"> Blok 4
 				</label>
 
 				<h3>Beoordeel de lesstof op een schaal van 1-10</h3>
 				<label for="wafs-lesstof"></label>
-				<input type="range" name="wafs-lesstof" id="wafs-lesstof" min="1" max="10" value="0">
+				<input required type="range" name="wafs-lesstof" id="wafs-lesstof" min="1" max="10" value="1">
 				<h3>Beoordeel de uitleg op een schaal van 1-10</h3>
 				<label for="wafs-uitleg"></label>
-				<input type="range" name="wafs-uitleg" id="wafs-uitleg" min="1" max="10" value="0">
+				<input required type="range" name="wafs-uitleg" id="wafs-uitleg" min="1" max="10" value="1">
 				<h3>Beoordeel de inzicht op een schaal van 1-10</h3>
 				<label for="wafs-inzicht"></label>
-				<input type="range" name="wafs-inzicht" id="wafs-inzicht" min="1" max="10" value="0">
-				<button id="info-button" class="js-disabled">Next</button>
+				<input required type="range" name="wafs-inzicht" id="wafs-inzicht" min="1" max="10" value="1">
 
 			</section>
 
@@ -77,32 +75,31 @@
 				<h2>CSS to the Rescue</h2>
 				<h3>Welke docent(en)?</h3>
 				<label for="cssr-docent"></label>
-				<input type="text" name="cssr-docent" id="cssr-docent" value="">
+				<input required type="text" name="cssr-docent" id="cssr-docent" value="Fasilis, Sanne">
 
 				<h3>Tijdens welke periode had je dit vak?</h3>
 				<label for="cssr-weken">
-					<input type="radio" name="cssr-weken" id="blok1" value="blok1"> Blok 1
+					<input required type="radio" name="cssr-weken" id="blok1" value="blok1" checked> Blok 1
 				</label>
 				<label for="cssr-weken">
-					<input type="radio" name="cssr-weken" id="blok2" value="blok2"> Blok 2
+					<input required type="radio" name="cssr-weken" id="blok2" value="blok2"> Blok 2
 				</label>
 				<label for="cssr-weken">
-					<input type="radio" name="cssr-weken" id="blok3" value="blok3"> Blok 3
+					<input required type="radio" name="cssr-weken" id="blok3" value="blok3"> Blok 3
 				</label>
 				<label for="cssr-weken">
-					<input type="radio" name="cssr-weken" id="blok4" value="blok4"> Blok 4
+					<input required type="radio" name="cssr-weken" id="blok4" value="blok4"> Blok 4
 				</label>
 
 				<h3>Beoordeel de lesstof op een schaal van 1-10</h3>
 				<label for="cssr-lesstof"></label>	
-				<input type="range" name="cssr-lesstof" id="cssr-lesstof" min="1" max="10" value="0">
+				<input required type="range" name="cssr-lesstof" id="cssr-lesstof" min="1" max="10" value="1">
 				<h3>Beoordeel de uitleg op een schaal van 1-10</h3>
 				<label for="cssr-uitleg"></label>
-				<input type="range" name="cssr-uitleg" id="cssr-uitleg" min="1" max="10" value="0">
+				<input required type="range" name="cssr-uitleg" id="cssr-uitleg" min="1" max="10" value="1">
 				<h3>Beoordeel de inzicht op een schaal van 1-10</h3>
 				<label for="cssr-inzicht"></label>
-				<input type="range" name="cssr-inzicht" id="cssr-inzicht" min="1" max="10" value="0">
-				<button id="info-button" class="js-disabled">Next</button>
+				<input required type="range" name="cssr-inzicht" id="cssr-inzicht" min="1" max="10" value="1">
 
 			</section>
 
@@ -111,32 +108,31 @@
 				<h2>Progressive Web App</h2>
 				<h3>Welke docent(en)?</h3>
 				<label for="pwa-docent"></label>
-				<input type="text" name="pwa-docent" id="pwa-docent" value="">
+				<input required type="text" name="pwa-docent" id="pwa-docent" value="Janno, Declan">
 
 				<h3>Tijdens welke periode had je dit vak?</h3>
 				<label for="pwa-weken">
-					<input type="radio" name="pwa-weken" id="blok1" value="blok1"> Blok 1
+					<input required type="radio" name="pwa-weken" id="pwa-weken" value="blok1" checked> Blok 1
 				</label>
 				<label for="pwa-weken">
-					<input type="radio" name="pwa-weken" id="blok2" value="blok2"> Blok 2
+					<input required type="radio" name="pwa-weken" id="blok2" value="blok2"> Blok 2
 				</label>
 				<label for="pwa-weken">
-					<input type="radio" name="pwa-weken" id="blok3" value="blok3"> Blok 3
+					<input required type="radio" name="pwa-weken" id="blok3" value="blok3"> Blok 3
 				</label>
 				<label for="pwa-weken">
-					<input type="radio" name="pwa-weken" id="blok4" value="blok4"> Blok 4
+					<input required type="radio" name="pwa-weken" id="blok4" value="blok4"> Blok 4
 				</label>
 
 				<h3>Beoordeel de lesstof op een schaal van 1-10</h3>
 				<label for="pwa-lesstof"></label>
-				<input type="range" name="pwa-lesstof" id="pwa-lesstof" min="1" max="10" value="0">
+				<input required type="range" name="pwa-lesstof" id="pwa-lesstof" min="1" max="10" value="1">
 				<h3>Beoordeel de uitleg op een schaal van 1-10</h3>
 				<label for="pwa-uitleg"></label>
-				<input type="range" name="pwa-uitleg" id="pwa-uitleg" min="1" max="10" value="0">
+				<input required type="range" name="pwa-uitleg" id="pwa-uitleg" min="1" max="10" value="1">
 				<h3>Beoordeel de inzicht op een schaal van 1-10</h3>
 				<label for="pwa-inzicht"></label>
-				<input type="range" name="pwa-inzicht" id="pwa-inzicht" min="1" max="10" value="0">
-				<button id="info-button" class="js-disabled">Next</button>
+				<input required type="range" name="pwa-inzicht" id="pwa-inzicht" min="1" max="10" value="1">
 
 			</section>
 
@@ -145,34 +141,33 @@
 				<h2>Browser Technologies</h2>
 				<h3>Welke docent(en)?</h3>
 				<label for="bt-docent"></label>
-				<input type="text" name="bt-docent" id="bt-docent" value="">
+				<input required type="text" name="bt-docent" id="bt-docent" value="Fasilis, PSK">
 
 				<h3>Tijdens welke periode had je dit vak?</h3>
 				<label for="bt-weken">
-					<input type="radio" name="bt-weken" id="blok1" value="blok1"> Blok 1
+					<input required type="radio" name="bt-weken" id="blok1" value="blok1" checked> Blok 1
 				</label>
 				<label for="bt-weken">
-					<input type="radio" name="bt-weken" id="blok2" value="blok2"> Blok 2
+					<input required type="radio" name="bt-weken" id="blok2" value="blok2"> Blok 2
 				</label>
 				<label for="bt-weken">
-					<input type="radio" name="bt-weken" id="blok3" value="blok3"> Blok 3
+					<input required type="radio" name="bt-weken" id="blok3" value="blok3"> Blok 3
 				</label>
 				<label for="bt-weken">
-					<input type="radio" name="bt-weken" id="blok4" value="blok4"> Blok 4
+					<input required type="radio" name="bt-weken" id="blok4" value="blok4"> Blok 4
 				</label>
 
 				<h3>Beoordeel de lesstof op een schaal van 1-10</h3>
 				<label for="bt-lesstof"></label>
-				<input type="range" name="bt-lesstof" id="bt-lesstof" min="1" max="10" value="0">
+				<input required type="range" name="bt-lesstof" id="bt-lesstof" min="1" max="10" value="1">
 				<h3>Beoordeel de uitleg op een schaal van 1-10</h3>
 				<label for="bt-uitleg"></label>
-				<input type="range" name="bt-uitleg" id="bt-uitleg" min="1" max="10" value="0">
+				<input required type="range" name="bt-uitleg" id="bt-uitleg" min="1" max="10" value="1">
 				<h3>Beoordeel de inzicht op een schaal van 1-10</h3>
 				<label for="bt-inzicht"></label>
-				<input type="range" name="bt-inzicht" id="bt-inzicht" min="1" max="10" value="0">
-				<input type="submit" value="Submit">
+				<input required type="range" name="bt-inzicht" id="bt-inzicht" min="1" max="10" value="1">
+				<input required type="submit" value="Submit" id="submit">
 			</section>
-
 		</form>
 	</main>
 	<script src="js/script.js"></script>
