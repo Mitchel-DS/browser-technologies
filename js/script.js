@@ -29,7 +29,7 @@ const nextButton = document.querySelector("#next");
 // hides all sections except the first
 for (let i = 1; i < sections.length; i++) {
 	sections[i].classList.add("js-active");
-  }
+}
 
 // listens to next button and adds 1 to current section 
 nextButton.addEventListener('click', () => {
@@ -46,7 +46,7 @@ nextButton.addEventListener('click', () => {
 	}
 
 	const nextSection = section.nextElementSibling;
-	if (validation && nextSection && currentSection < sections.length - 1)  {
+	if (validation && nextSection && currentSection < sections.length - 1) {
 		section.classList.remove('active');
 		section.classList.add('js-active');
 		nextSection.classList.add('active');
@@ -54,12 +54,12 @@ nextButton.addEventListener('click', () => {
 		console.log(currentSection);
 		console.log(sections.length);
 		currentSection++;
-	} 
+	}
 
 	if (currentSection !== 0) {
 		previousButton.style.display = 'block';
 	}
-	
+
 	if (currentSection === sections.length - 1) {
 		nextButton.style.display = 'none';
 	}
@@ -79,6 +79,7 @@ nextButton.addEventListener('click', () => {
 previousButton.addEventListener('click', () => {
 	const section = document.querySelector('.active');
 	const previousSection = section.previousElementSibling;
+
 	if (previousSection) {
 		section.classList.remove('active');
 		section.classList.add('js-active');
@@ -96,7 +97,6 @@ previousButton.addEventListener('click', () => {
 	if (currentSection < sections.length - 1) {
 		nextButton.style.display = 'block';
 	}
-
 });
 
 // get required data values and stores in local storage
@@ -109,11 +109,11 @@ form.addEventListener('submit', (e) => {
 	const student_number = document.querySelector("#student-number").value;
 	const student_email = document.querySelector("#student-email").value;
 
-	var message = '<p>Name: ' + student_name  + '</p>' + '<p>' + 'Number:' + student_number  + '</p>' + '<p>' + ' Email: ' +  student_email + '</p>';
+	var message = '<p>Name: ' + student_name + '</p>' + '<p>' + 'Number:' + student_number + '</p>' + '<p>' + ' Email: ' + student_email + '</p>';
 	results.innerHTML = message;
 })
 
-window.onload = function() {
+window.onload = function () {
 	if (currentSection === 0) {
 		previousButton.style.display = 'none';
 	}
@@ -125,6 +125,6 @@ window.onload = function() {
 	document.querySelector('#student-name').value = student_name;
 	document.querySelector('#student-number').value = student_number;
 	document.querySelector('#student-email').value = student_email;
- }
+}
 
 
