@@ -8,6 +8,53 @@ const resultsContainer = document.querySelector('#results-container');
 const results = document.querySelector('#results');
 const error = document.querySelector('.error');
 
+const name = document.querySelector('#student-name');
+const number = document.querySelector('#student-number');
+const email = document.querySelector('#student-email');
+
+const valnumber = document.querySelector('.valnumber');
+const valname = document.querySelector('.valname');
+const valemail = document.querySelector('.valemail');
+
+// slider variables
+const slider = document.getElementById("wafs-lesstof");
+const output = document.getElementById("slider-value");
+
+output.textContent = slider.value; // Set initial value
+
+slider.addEventListener("input", () => {
+  output.textContent = slider.value;
+});
+
+const slider2 = document.getElementById("wafs-uitleg");
+const output2 = document.getElementById("slider-value2");
+
+output2.textContent = slider2.value; // Set initial value
+
+slider2.addEventListener("input", () => {
+  output2.textContent = slider2.value;
+});
+
+const slider3 = document.getElementById("wafs-inzicht");
+const output3 = document.getElementById("slider-value3");
+
+output3.textContent = slider3.value; // Set initial value
+
+slider3.addEventListener("input", () => {
+  output3.textContent = slider3.value;
+});
+
+
+
+
+
+
+
+
+
+
+
+
 // current form section
 let currentSection = 0;
 console.log(currentSection);
@@ -43,6 +90,36 @@ nextButton.addEventListener('click', () => {
 			validation = false;
 			error.style.display = 'flex';
 		}
+		else {
+			error.style.display = 'none';
+		}
+	}
+
+
+
+	if (name.value === '') {
+		valname.style.display = 'flex';
+		validation = false;
+	}
+	else {
+		valname.style.display = 'none';
+	}
+
+	if (number.value === '' || isNaN(number.value) || number.value.length < 9) {
+		console.log(number.value.length);
+		valnumber.style.display = 'flex';
+		validation = false;
+	}
+	else {
+		valnumber.style.display = 'none';
+	}
+
+	if (email.value === '' || email.value.indexOf('@') === -1) {
+		valemail.style.display = 'flex';
+		validation = false;
+	}
+	else {
+		valemail.style.display = 'none';
 	}
 
 	const nextSection = section.nextElementSibling;

@@ -107,6 +107,15 @@ Although some fields are already filled in with a default value, the screenreade
 
 Obviously, Chrome works fine. It supports all the features I used, because I made it based on the chrome browser. I tried using new features, such as the :valid and :invalid pseudo classes, but it didn't work in chrome, because it is not supported yet.
 
+```css
+input:user-invalid {
+	border-color: #f00;
+}
+```
+
+If it is supported it will show additional validation.
+
+
 ![chrome](/images/uservalid.png)
 
 I also used the :has pseudo class, which is only supported in chrome, safari for now. That works fine.
@@ -121,6 +130,9 @@ I also used the :has pseudo class, which isn't supported by firefox yet. That do
 
 :valid and :invalid pseudo classes work in Safari. The website works fine in Safari.
 I also used the :has pseudo class, which is only supported in chrome, safari for now. That works fine.
+
+Only trying to control it with keyboard can be a bit tricky cause it has different controls than chrome.
+Also it skips a lot of things. For example, if you press tab, it will skip the radio buttons and go straight to the next button. Also submit doesn't work without a screenreader.
 
 ### Mobile
 

@@ -69,8 +69,25 @@ label {
 	margin-bottom: 5px;
 }
 
-input[type='radio'] label {
-	
+input[type='radio'] {
+	appearance: none;
+}
+
+label:has(input[type="radio"]){
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+label:has(input[type="radio"]:hover){
+	color: red;
+}
+
+label:has(input[type="radio"]:checked){
+    font-weight: bold;
+    color: white;
+	background-color: rgb(97, 66, 97);
 }
 
 input[type='range'] {
@@ -108,6 +125,12 @@ div.error {
 
 div.error p { 
 	color: white;
+}
+
+.personal-info div {
+	display: none;
+	color: red;
+	margin-bottom: 10px;
 }
 
 button {

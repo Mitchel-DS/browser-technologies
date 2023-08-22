@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Enquette - Minor Web</title>
-	<!-- <link rel="stylesheet" href="css/style.css"> -->
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -28,13 +28,17 @@
 				<h2>Personal information</h2>
 				<label for="student-name">What's your name?</label>
 				<input required type="text" name="student-name" id="student-name">
+				<div class="valname">Please fill in your full name.</div>
 
 				<label for="student-number">What's your student number?</label>
 				<input required type="text" pattern="[5-6][0-9]{8}" maxlength="9" name="student-number" id="student-number"
 					required>
+				    <div class="valnumber">Please fill in valid student number. Example: 500831235</div>
+
 
 				<label for="student-email">What's your email?</label>
 				<input required type="email" name="student-email" id="student-email" required>
+				<div class="valemail">Please fill in valid email.</div>
 			</section>
 
 			<!-- Web App from Scratch -->
@@ -45,23 +49,22 @@
 				<input required type="text" name="wafs-docent" id="wafs-docent" value="Robert, Joost" placeholder="Robert..">
 
 				<h3>Tijdens welke periode had je dit vak?</h3>
-				<label for="wafs-weken">
+				<label for="blok1">
 					<input required type="radio" name="wafs-weken" id="blok1" value="blok1" checked> Blok 1
 				</label>
-				<label for="wafs-weken">
+				<label for="blok2">
 					<input required type="radio" name="wafs-weken" id="blok2" value="blok2"> Blok 2
 				</label>
-				<label for="wafs-weken">
+				<label for="blok3">
 					<input required type="radio" name="wafs-weken" id="blok3" value="blok3"> Blok 3
 				</label>
-				<label for="wafs-weken">
+				<label for="blok4">
 					<input required type="radio" name="wafs-weken" id="blok4" value="blok4"> Blok 4
 				</label>
 
 				<h3>Beoordeel de lesstof op een schaal van 1-10</h3>
 				<label for="wafs-lesstof"></label>
 				<input required type="range" name="wafs-lesstof" id="wafs-lesstof" min="1" max="10" value="1" list="ticks">
-
 				<datalist id="ticks">
 					<option value="1" label="1">
 					<option value="2" label="2">
@@ -74,14 +77,19 @@
 					<option value="9" label="9">
 					<option value="10" label="10">
 				</datalist>
+				<span id="slider-value"></span>
+
 
 
 				<h3>Beoordeel de uitleg op een schaal van 1-10</h3>
 				<label for="wafs-uitleg"></label>
 				<input required type="range" name="wafs-uitleg" id="wafs-uitleg" min="1" max="10" value="1" list="ticks">
+				<span id="slider-value2"></span>
+
 				<h3>Beoordeel de inzicht op een schaal van 1-10</h3>
 				<label for="wafs-inzicht"></label>
 				<input required type="range" name="wafs-inzicht" id="wafs-inzicht" min="1" max="10" value="1" list="ticks">
+				<span id="slider-value3"></span>
 
 			</section>
 
@@ -93,17 +101,17 @@
 				<input required type="text" name="cssr-docent" id="cssr-docent" value="Fasilis, Sanne">
 
 				<h3>Tijdens welke periode had je dit vak?</h3>
-				<label for="cssr-weken">
-					<input required type="radio" name="cssr-weken" id="blok1" value="blok1" checked> Blok 1
+				<label for="cssr-weken1">
+					<input required type="radio" name="cssr-weken" id="cssr-weken1" value="blok1" checked> Blok 1
 				</label>
-				<label for="cssr-weken">
-					<input required type="radio" name="cssr-weken" id="blok2" value="blok2"> Blok 2
+				<label for="cssr-weken2">
+					<input required type="radio" name="cssr-weken" id="cssr-weken2" value="blok2"> Blok 2
 				</label>
-				<label for="cssr-weken">
-					<input required type="radio" name="cssr-weken" id="blok3" value="blok3"> Blok 3
+				<label for="cssr-weken3">
+					<input required type="radio" name="cssr-weken" id="cssr-weken3" value="blok3"> Blok 3
 				</label>
-				<label for="cssr-weken">
-					<input required type="radio" name="cssr-weken" id="blok4" value="blok4"> Blok 4
+				<label for="cssr-weken4">
+					<input required type="radio" name="cssr-weken" id="cssr-weken4" value="blok4"> Blok 4
 				</label>
 
 				<h3>Beoordeel de lesstof op een schaal van 1-10</h3>
